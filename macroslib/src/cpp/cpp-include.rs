@@ -241,7 +241,7 @@ foreign_typemap!(
 
 foreign_typemap!(
     (r_type) * const ::std::os::raw::c_void;
-    (f_type) "/*const*/void *";
+    (f_type) "const void *";
 );
 
 foreign_typemap!(
