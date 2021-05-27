@@ -283,7 +283,7 @@ impl CppConfig {
 
                 let has_clone = class.methods.iter().any(|x| match x.variant {
                     MethodVariant::Method(_) | MethodVariant::StaticMethod => {
-                        x.rust_id.is_ident("clone")
+                        x.short_name() == "clone"
                     }
                     MethodVariant::Constructor => false,
                 });
